@@ -19,7 +19,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 class RegisterUser(APIView):
 
-    # token_obtain_pair = TokenObtainPairView.as_view()
+    token_obtain_pair = TokenObtainPairView.as_view()
 
     def post(self, request):
         #validation to check whether mobile already exists
