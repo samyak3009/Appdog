@@ -54,7 +54,7 @@ class UserProfile(APIView):
         except self.model_class.DoesNotExist:
             raise ValidationError({
                 'status': False,
-                'message': f"failed to find {self.instance_name}",
+                'message': "failed to find {self.instance_name}",
                 "data": {}
             })
 
@@ -104,19 +104,3 @@ def responsedata(status, message, data=None):
     else:
         return {"status":status,"message":message}
 
-
-
-
-
-# {
-#     "dog_name" : "dog1",
-#     "age": 23,
-#     "gender":"male",
-#     "breed" : "breed1",
-#     "size" : 23,
-#     "Bio" : "test",
-#     "locattion" : "sasa",
-#     "mobile" : 7681788999,
-#     "password" : "sasa",
-#     "confirm_password" : "sasa",
-# }
